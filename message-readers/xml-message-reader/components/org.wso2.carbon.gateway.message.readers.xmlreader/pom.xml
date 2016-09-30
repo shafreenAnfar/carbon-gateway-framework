@@ -102,7 +102,8 @@
             org.wso2.carbon.gateway.core.*;version="${carbon.gw.package.export.version}"
         </import.package>
         <carbon.component>
-            osgi.service; objectClass="org.wso2.carbon.gateway.core.flow.contentaware.messagereaders.ReaderProvider"
+            osgi.service; objectClass="org.wso2.carbon.gateway.core.flow.contentaware.messagereaders.ReaderProvider",
+
         </carbon.component>
         <osgi.framework.import.version.range>[1.8.0, 2.0.0)</osgi.framework.import.version.range>
     </properties>

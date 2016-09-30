@@ -26,7 +26,7 @@ import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.osgi.service.component.annotations.ReferencePolicy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.wso2.carbon.gateway.core.MessageProcessor;
+import org.wso2.carbon.gateway.core.GateWayMessageProcessor;
 import org.wso2.carbon.gateway.core.ServiceContextHolder;
 import org.wso2.carbon.messaging.CarbonMessageProcessor;
 import org.wso2.carbon.messaging.TransportSender;
@@ -48,8 +48,12 @@ public class GatewayServiceComponent {
         try {
             log.info("Starting Gateway...!");
 
+//            new MicroservicesRunner(8280)
+//                    .deploy(new ConfigDeployer())
+//                    .start();
+
             //Creating the processor and registering the service
-            bundleContext.registerService(CarbonMessageProcessor.class, new MessageProcessor(), null);
+            bundleContext.registerService(CarbonMessageProcessor.class, new GateWayMessageProcessor(), null);
 
         } catch (Exception ex) {
             String msg = "Error while loading Gateway";

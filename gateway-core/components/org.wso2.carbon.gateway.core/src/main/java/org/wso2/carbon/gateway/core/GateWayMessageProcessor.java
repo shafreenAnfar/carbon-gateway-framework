@@ -35,9 +35,9 @@ import java.util.Stack;
  *  Message Processor Implementation for Gateway
  *
  */
-public class MessageProcessor implements CarbonMessageProcessor {
+public class GateWayMessageProcessor implements CarbonMessageProcessor {
 
-    private static final Logger log = LoggerFactory.getLogger(MessageProcessor.class);
+    private static final Logger log = LoggerFactory.getLogger(GateWayMessageProcessor.class);
 
     @Override
     public boolean receive(CarbonMessage cMsg, CarbonCallback callback) throws Exception {
@@ -75,6 +75,6 @@ public class MessageProcessor implements CarbonMessageProcessor {
 
     @Override
     public String getId() {
-        return null;
+        return "GW-CORE-PROCESSOR";
     }
 }

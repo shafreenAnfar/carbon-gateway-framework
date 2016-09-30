@@ -15,12 +15,12 @@ import org.wso2.carbon.messaging.CarbonMessage;
 import static org.mockito.Mockito.times;
 
 /**
- * This test-case test the functionality of MessageProcessor implementation
+ * This test-case test the functionality of GwMessageProcessor implementation
  */
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(InboundEPProviderRegistry.class)
-public class MessageProcessorTest {
+public class GwMessageProcessorTest {
 
     @Test
     public void receiveTest() throws Exception {
@@ -38,8 +38,8 @@ public class MessageProcessorTest {
         Mockito.when(inboundEPProviderRegistry.getProvider("http")).thenReturn(provider);
         Mockito.when(provider.getInboundEndpointDispatcher()).thenReturn(dispatcher);
 
-        MessageProcessor messageProcessor = new MessageProcessor();
-        messageProcessor.receive(carbonMessage, carbonCallback);
+        GateWayMessageProcessor gwMessageProcessor = new GateWayMessageProcessor();
+        gwMessageProcessor.receive(carbonMessage, carbonCallback);
 
         // Assert whether receive method invokes the dispatcher at the end
         Mockito.verify(dispatcher, times(1)).dispatch(carbonMessage, carbonCallback);

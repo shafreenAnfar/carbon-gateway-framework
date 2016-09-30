@@ -92,6 +92,14 @@
             <!--<groupId>org.wso2.com.netflix.rxjava</groupId>-->
             <!--<artifactId>rxJava</artifactId>-->
         <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.wso2.msf4j</groupId>-->
+            <!--<artifactId>msf4j-core</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.google.code.gson</groupId>-->
+            <!--<artifactId>gson</artifactId>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>
@@ -154,6 +162,14 @@
                                     <symbolicName>rxjava</symbolicName>
                                     <version>${rx.java.version}</version>
                                 </bundle>
+                                <!--<bundle>-->
+                                    <!--<symbolicName>msf4j-core</symbolicName>-->
+                                    <!--<version>2.0.0</version>-->
+                                <!--</bundle>-->
+                                <!--<bundle>-->
+                                    <!--<symbolicName>com.google.gson</symbolicName>-->
+                                    <!--<version>2.7</version>-->
+                                <!--</bundle>-->
                             </bundles>
                         </configuration>
                     </execution>
